@@ -30,49 +30,55 @@ function initPageLoader() {
 // Section Indicators
 function initSectionIndicators() {
     const sections = document.querySelectorAll('.section');
-    const indicators = [];
     
-    // Create indicator container for each section
+    // Only proceed on desktop
+    if (window.innerWidth <= 768) return;
+    
+    // Create single fixed indicator container
+    const indicatorContainer = document.createElement('div');
+    indicatorContainer.className = 'section-indicators-fixed';
+    document.body.appendChild(indicatorContainer);
+    
+    // Create dots for each section
     sections.forEach((section, index) => {
-        const indicator = document.createElement('div');
-        indicator.className = 'section-indicator';
+        const dot = document.createElement('div');
+        dot.className = 'indicator-dot';
+        dot.setAttribute('data-section', index);
         
-        sections.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.className = 'indicator-dot';
-            if (i === index) dot.classList.add('active');
-            
-            dot.addEventListener('click', () => {
-                sections[i].scrollIntoView({ behavior: 'smooth' });
-            });
-            
-            indicator.appendChild(dot);
+        // Click to scroll to section
+        dot.addEventListener('click', () => {
+            sections[index].scrollIntoView({ behavior: 'smooth' });
         });
         
-        // Only add to desktop
-        if (window.innerWidth > 768) {
-            section.appendChild(indicator);
-        }
-        indicators.push(indicator);
+        indicatorContainer.appendChild(dot);
     });
     
     // Update active indicator on scroll
-    window.addEventListener('scroll', () => {
+    function updateActiveIndicator() {
         let current = 0;
+        let minDistance = Infinity;
+        
         sections.forEach((section, index) => {
             const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            const sectionMiddle = rect.top + rect.height / 2;
+            const viewportMiddle = window.innerHeight / 2;
+            const distance = Math.abs(sectionMiddle - viewportMiddle);
+            
+            if (distance < minDistance) {
+                minDistance = distance;
                 current = index;
             }
         });
         
-        indicators.forEach((indicator, index) => {
-            const dots = indicator.querySelectorAll('.indicator-dot');
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === current);
-            });
+        // Update dots
+        const dots = indicatorContainer.querySelectorAll('.indicator-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === current);
         });
-    });
+    }
+    
+    window.addEventListener('scroll', updateActiveIndicator);
+    updateActiveIndicator(); // Set initial state
 }
 
 // Floating Contact Card
