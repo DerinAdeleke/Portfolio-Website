@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derin Adeleke — Creative Strategist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="#intro" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="#skills" class="nav-link">Expertise</a>
+            <a href="#contact" class="nav-link">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Introduction Section -->
+    <section id="intro" class="section hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Derin Adeleke</h1>
+                <div class="divider"></div>
+                <p class="hero-subtitle">Creative Strategist</p>
+                <p class="hero-description">
+                    I bring experiences to life—crafting brand narratives that resonate, 
+                    orchestrating memorable events, and building strategic partnerships 
+                    that connect culture, community, and commerce.
+                </p>
+                <p class="hero-description">
+                    With a foundation in event production, brand communications, and creative 
+                    strategy, I thrive at the intersection of storytelling and execution. 
+                    Currently seeking remote opportunities with lifestyle, luxury, and cultural 
+                    brands that value innovation, authenticity, and elevated experiences.
+                </p>
+                <div class="scroll-indicator" id="scroll-hint">
+                    <span>Explore</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M10 3 L10 17 M10 17 L5 12 M10 17 L15 12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Selected Work</h2>
+            
+            <div class="project-grid">
+                <!-- Project 1: AJ Events -->
+                <article class="project-card" data-project="ajevents">
+                    <div class="project-number">01</div>
+                    <h3 class="project-title">AJ Events</h3>
+                    <p class="project-role">Events & Development Assistant</p>
+                    <p class="project-description">
+                        Support high-value corporate and philanthropic clients through full-service event 
+                        management and fundraising strategy. Manage six-figure budgets, oversee donor 
+                        communications, and coordinate multi-vendor production logistics for luxury galas, 
+                        weddings, and brand activations. Partner with executive leadership to deliver events 
+                        that exceed client expectations and reinforce brand prestige.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Event Strategy</span>
+                        <span class="tag">Donor Relations</span>
+                        <span class="tag">Production Logistics</span>
+                    </div>
+                    
+                    <!-- Expanded Content -->
+                    <div class="project-expanded-content">
+                        <div class="project-gallery">
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Event Setup</span>
+                                <!-- Add your image: <img src="images/ajevents-1.jpg" alt="AJ Events Setup"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Client Activation</span>
+                                <!-- Add your image: <img src="images/ajevents-2.jpg" alt="Client Event"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Venue Design</span>
+                                <!-- Add your image: <img src="images/ajevents-3.jpg" alt="Venue Design"> -->
+                            </div>
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>Key Achievements</h4>
+                                <ul>
+                                    <li>Managed client portfolios with event budgets ranging from $250K–$1M, ensuring transparency and precision in financial reporting.</li>
+                                    <li>Supported partnership and sponsorship outreach for major corporate and nonprofit clients.</li>
+                                    <li>Led on-site auctions and "Fund-in-Need" fundraising segments, helping maximize live-event contributions.</li>
+                                    <li>Recruited, trained, and supervised volunteer and day-of event staff, ensuring seamless execution across multiple venues.</li>
+                                    <li>Coordinated logistics and vendor relations for large-scale events, maintaining white-glove client service.</li>
+                                    <li>Assisted in preparing high-value proposals and managing relationships with premium venues and suppliers.</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Scope of Work</h4>
+                                <p>
+                                    Oversee pre- and post-event communications, development operations, and financial 
+                                    documentation. Execute fundraising components including live auctions and pledge 
+                                    drives, while managing on-site volunteer teams. Work directly with leadership to 
+                                    implement fundraising strategies, maintain sponsorship pipelines, and deliver 
+                                    polished event experiences for clients in the luxury and philanthropic sectors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-expand-btn">View More</button>
+                </article>
+
+                <!-- Project 2: In Bloom -->
+                <article class="project-card" data-project="inbloom">
+                    <div class="project-number">02</div>
+                    <h3 class="project-title">In Bloom</h3>
+                    <p class="project-role">Brand & Community Lead</p>
+                    <p class="project-description">
+                        Spearheaded brand development and community engagement strategy for a wellness 
+                        and lifestyle collective focused on Black women's empowerment. Designed and 
+                        executed intimate gatherings, panels, and workshops that fostered connection 
+                        and conversation. Managed social media presence, curated content strategy, 
+                        and secured partnerships with aligned brands. Grew community from inception 
+                        to over 2,500 engaged members through authentic storytelling and consistent, 
+                        values-driven activations.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Community Building</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Partnerships</span>
+                    </div>
+                    
+                    <!-- Expanded Content -->
+                    <div class="project-expanded-content">
+                        <div class="project-gallery">
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Community Gathering</span>
+                                <!-- Add your image: <img src="images/inbloom-1.jpg" alt="In Bloom Event"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Panel Discussion</span>
+                                <!-- Add your image: <img src="images/inbloom-2.jpg" alt="Panel Event"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Workshop Setting</span>
+                                <!-- Add your image: <img src="images/inbloom-3.jpg" alt="Workshop"> -->
+                            </div>
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>Impact Metrics</h4>
+                                <ul>
+                                    <li>Grew Instagram following to 2,500+ highly engaged members</li>
+                                    <li>Hosted 15+ in-person and virtual community events</li>
+                                    <li>Secured partnerships with 5 wellness and lifestyle brands</li>
+                                    <li>Created 100+ pieces of original content and resources</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Brand Philosophy</h4>
+                                <p>
+                                    In Bloom centered Black women's wellness, creativity, and joy through 
+                                    intentional community spaces. Led brand voice development, visual identity, 
+                                    and content calendar management while fostering authentic connections through 
+                                    storytelling that resonated deeply with our audience's lived experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-expand-btn">View More</button>
+                </article>
+
+                <!-- Project 3: Creative Concept -->
+                <article class="project-card" data-project="curatededit">
+                    <div class="project-number">03</div>
+                    <h3 class="project-title">The Curated Edit</h3>
+                    <p class="project-role">Concept Development</p>
+                    <p class="project-description">
+                        A conceptual experiential marketing series designed for luxury fashion and beauty 
+                        brands seeking authentic Gen Z and Millennial engagement. The Edit reimagines 
+                        traditional product launches as immersive, multi-sensory journeys—combining 
+                        artful installations, tastemaker dinners, and shoppable moments. Each activation 
+                        is hyper-personalized, Instagram-worthy, and strategically designed to generate 
+                        organic buzz. This framework demonstrates my vision for creating culturally 
+                        relevant, high-impact brand experiences.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Experiential Marketing</span>
+                        <span class="tag">Creative Direction</span>
+                        <span class="tag">Concept Design</span>
+                    </div>
+                    
+                    <!-- Expanded Content -->
+                    <div class="project-expanded-content">
+                        <div class="project-gallery">
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Concept Mood Board</span>
+                                <!-- Add your image: <img src="images/curated-1.jpg" alt="Concept Visual"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Installation Design</span>
+                                <!-- Add your image: <img src="images/curated-2.jpg" alt="Installation"> -->
+                            </div>
+                            <div class="project-image">
+                                <span class="project-image-placeholder">Experience Flow</span>
+                                <!-- Add your image: <img src="images/curated-3.jpg" alt="Experience Map"> -->
+                            </div>
+                        </div>
+                        
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>Concept Framework</h4>
+                                <ul>
+                                    <li>Curated sensory experiences (sight, sound, scent, touch)</li>
+                                    <li>Influencer and tastemaker engagement strategy</li>
+                                    <li>Shoppable installations with seamless commerce integration</li>
+                                    <li>Content capture zones designed for organic social sharing</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Target Applications</h4>
+                                <p>
+                                    Ideal for luxury fashion houses, premium beauty brands, and lifestyle 
+                                    companies launching new collections or entering new markets. The Curated 
+                                    Edit creates exclusive, invitation-only experiences that drive brand 
+                                    affinity, product discovery, and authentic social amplification.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-expand-btn">View More</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Expertise & Tools</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Strategic</h3>
+                    <ul class="skill-list">
+                        <li>Event Production & Design</li>
+                        <li>Brand Partnerships</li>
+                        <li>Creative Strategy</li>
+                        <li>Campaign Development</li>
+                        <li>Budget Management</li>
+                        <li>Vendor Negotiation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Communications</h3>
+                    <ul class="skill-list">
+                        <li>Content Creation</li>
+                        <li>Social Media Strategy</li>
+                        <li>Copywriting</li>
+                        <li>Brand Storytelling</li>
+                        <li>Community Management</li>
+                        <li>Public Relations</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Technical</h3>
+                    <ul class="skill-list">
+                        <li>Adobe Creative Suite</li>
+                        <li>Canva & Figma</li>
+                        <li>Asana & Monday.com</li>
+                        <li>Google Analytics</li>
+                        <li>Mailchimp & Later</li>
+                        <li>Zoom & Virtual Events</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="philosophy">
+                <p class="philosophy-text">
+                    <em>"Every project is an opportunity to craft something meaningful—where 
+                    creativity meets strategy, and experiences become stories worth sharing."</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Create Together</h2>
+            
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm actively seeking remote opportunities with brands that are redefining 
+                    luxury, culture, and connection. Whether you're launching a new experience, 
+                    building a community, or elevating your brand story—let's talk.
+                </p>
+                
+                <div class="contact-cta">
+                    <a href="mailto:derin@ajevents.co" class="cta-button">Get in Touch</a>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/derinadeleke" target="_blank" class="contact-link">LinkedIn</a>
+                    <span class="link-separator">·</span>
+                    <a href="https://instagram.com/ajevents" target="_blank" class="contact-link">Instagram</a>
+                    <span class="link-separator">·</span>
+                    <a href="mailto:derin@ajevents.co" class="contact-link">Email</a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>&copy; 2025 Derin Adeleke. Designed with intention.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
