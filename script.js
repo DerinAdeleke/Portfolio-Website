@@ -2,6 +2,7 @@
 
 // Initialize everything on load
 document.addEventListener('DOMContentLoaded', () => {
+    initPageLoader();
     initCustomCursor();
     initSmoothReveal();
     initParticleBackground();
@@ -11,7 +12,84 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectExpand();
     initSmoothScroll();
     initParallax();
+    initSectionIndicators();
+    initFloatingContact();
 });
+
+// Page Loader Animation
+function initPageLoader() {
+    const loader = document.querySelector('.page-loader');
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 2500);
+    });
+}
+
+// Section Indicators
+function initSectionIndicators() {
+    const sections = document.querySelectorAll('.section');
+    const indicators = [];
+    
+    // Create indicator container for each section
+    sections.forEach((section, index) => {
+        const indicator = document.createElement('div');
+        indicator.className = 'section-indicator';
+        
+        sections.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot';
+            if (i === index) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                sections[i].scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            indicator.appendChild(dot);
+        });
+        
+        // Only add to desktop
+        if (window.innerWidth > 768) {
+            section.appendChild(indicator);
+        }
+        indicators.push(indicator);
+    });
+    
+    // Update active indicator on scroll
+    window.addEventListener('scroll', () => {
+        let current = 0;
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                current = index;
+            }
+        });
+        
+        indicators.forEach((indicator, index) => {
+            const dots = indicator.querySelectorAll('.indicator-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === current);
+            });
+        });
+    });
+}
+
+// Floating Contact Card
+function initFloatingContact() {
+    const floatingContact = document.querySelector('.floating-contact');
+    
+    window.addEventListener('scroll', () => {
+        // Show after scrolling 30% of the page
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        
+        if (scrollPercentage > 30 && scrollPercentage < 90) {
+            floatingContact.classList.add('visible');
+        } else {
+            floatingContact.classList.remove('visible');
+        }
+    });
+}
 
 // Custom Cursor
 function initCustomCursor() {

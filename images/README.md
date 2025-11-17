@@ -16,10 +16,10 @@ Add your project images to this folder to display in your portfolio.
 - `inbloom-2.jpg` - Panel Discussion
 - `inbloom-3.jpg` - Workshop Setting
 
-**The Curated Edit:**
-- `curated-1.jpg` - Concept Mood Board
-- `curated-2.jpg` - Installation Design
-- `curated-3.jpg` - Experience Flow
+**Sports, Entertainment & Impact Summit:**
+- `sei-1.jpg` - Summit Venue
+- `sei-2.jpg` - Panel Discussion
+- `sei-3.jpg` - Networking Event
 
 ### Recommended Image Specs:
 
