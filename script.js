@@ -1,7 +1,24 @@
 // D3.js Interactive Elements for Portfolio
 
+// Ensure page starts at the top on refresh
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
+// Force scroll to top on page load
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
 // Initialize everything on load
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0); // Ensure top position
     initPageLoader();
     initCustomCursor();
     initSmoothReveal();
